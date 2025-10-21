@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIDTERM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <div id="formSection" class="container">
+ <form id="groupForm" novalidate>
+   <h1>Group Form</h1>
+   <div class="form-group">
+    <div class="name-group">
+          <div class="input-container">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" placeholder="First name" required>
+            <span class="error" id="firstNameError"></span>
+          </div>
+          <div class="input-container">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" placeholder="Last name" required>
+            <span class="error" id="lastNameError"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@company.com" required>
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="error" id="passwordError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="teamSize">Team size</label>
+        <select id="teamSize" required>
+          <option value="">Select team size</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <span class="error" id="teamSizeError"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Technologies</label>
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="html" name="technologies" value="HTML">
+            <label for="html">HTML</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="css" name="technologies" value="CSS">
+            <label for="css">CSS</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="javascript" name="technologies" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="reactjs" name="technologies" value="ReactJS">
+            <label for="reactjs">ReactJS</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="figma" name="technologies" value="Figma">
+            <label for="figma">Figma</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="github" name="technologies" value="Github">
+            <label for="github">Github</label>
+          </div>
+        </div>
+        <span class="error" id="technologiesError"></span>
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+
+  
+  <div id="gameSection" class="game-container" style="display: none;">
+    <h2 class="game-title">Dice Game</h2>
+    <button class="reset-btn">RESET THE GAME</button>
+    <div class="scores">
+      <div>PLAYER 1 SCORE: <span class="score" id="score1">0</span></div>
+      <div>PLAYER 2 SCORE: <span class="score" id="score2">0</span></div>
+    </div>
+    <div>
+      <h3 class="result" id="result">Let's Play!</h3>
+      <span id="dice1" class="dice">🎲</span>
+      <span class="vs">vs</span>
+      <span id="dice2" class="dice">🎲</span>
+    </div>
+    <button class="roll-btn">ROLL</button>
+    
+    <div class="history">
+      <h4 class="history-title">Game History</h4>
+      <ul class="history-list" id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
